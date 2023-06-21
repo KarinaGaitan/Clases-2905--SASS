@@ -1,0 +1,55 @@
+@charset "UTF-8";
+:root {
+  scroll-behavior: smooth;
+  --primary-main-color: deeppink;
+  --primary-background-color: #16181d;
+  --primary-text-color: white;
+  --primary-font-family: monospace;
+  --letter-color-1: dodgerblue;
+  --letter-color-2: crimson;
+  --letter-color-3: coral;
+  --letter-color-4: gold;
+  --letter-color-5: darkmagenta;
+  --letter-color-6: cyan;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: inherit;
+}
+.hero__letter {
+  /*Para darle color a cada letra del acróstico diferente*/
+}
+.hero__letter__letter:nth-child(1) {
+  color: var(--letter-color-1);
+}
+.hero__letter__letter:nth-child(2) {
+  color: var(--letter-color-2);
+}
+.hero__letter__letter:nth-child(3) {
+  color: var(--letter-color-3);
+}
+.hero__letter__letter:nth-child(4) {
+  color: var(--letter-color-4);
+}
+.hero__letter__letter:nth-child(5) {
+  color: var(--letter-color-5);
+}
+.hero__letter__letter:nth-child(6) {
+  color: var(--letter-color-6);
+}
+.hero__letter__letter::before {
+  content: var(--letter);
+}
+
+/*Para que se repita cada letra del acróstico como espejo*/
+
+/*# sourceMappingURL=fe.css.map */
