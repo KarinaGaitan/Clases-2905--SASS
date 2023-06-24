@@ -35,6 +35,12 @@
   animation: beat 2s ease-in-out 0s infinite alternate;
   /*suave al salir y suave al entrar, no te demores nada. que se repita infinito*/
 }
+@media (min-width: 768px) {
+  .hero__name {
+    gap: 0.75rem;
+    font-size: 5rem;
+  }
+}
 .hero__letter {
   position: relative;
   transition: filter 0.25s;
@@ -65,8 +71,17 @@
   content: var(--letter);
   position: absolute;
   transform: scale(1.125);
-  filter: blur(0.125rem);
+  filter: blur(0.25rem);
   /*Para que se repita cada letra del acróstico como espejo*/
 }
+.hero__letter::after {
+  content: var(--letter);
+  position: absolute;
+  top: 87.5%;
+  left: 0;
+  transform: rotateX(125deg);
+  /*es para que el reflejo se rote un 180 grados. deg es grados*/
+  filter: blur(0.125rem);
+}
 
-/*# sourceMappingURL=fe.css..map */
+/*# sourceMappingURL=fe.css.map */
