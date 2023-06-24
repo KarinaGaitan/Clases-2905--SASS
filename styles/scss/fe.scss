@@ -6,7 +6,7 @@
 
 :root {
   scroll-behavior: smooth;
-  --primary-main-spacing: 1.5rem
+  --primary-main-spacing: 1.5rem;
   --primary-main-color: deeppink;
   --primary-background-color: #16181d;
   --primary-text-color: white;
@@ -106,9 +106,14 @@
 
 .acrostic {
   padding-top: var(--primary-main-spacing);
+  padding-bottom: var(--primary-main-spacing);
+  background-image: radial-gradient(transparent, var(--primary-main-color));
 
-  &__stanza {}
+  &__stanza {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
 
   &__verse {}
-
 }
