@@ -5,6 +5,8 @@
   }
 }
 :root {
+  scroll-behavior: smooth;
+  --primary-main-spacing: 1.5rem
   --primary-main-color: deeppink;
   --primary-background-color: #16181d;
   --primary-text-color: white;
@@ -15,6 +17,11 @@
   --letter-color-4: gold;
   --letter-color-5: darkmagenta;
   --letter-color-6: cyan;
+}
+@media (min-width: 768px) {
+  :root {
+    --primary-main-spacing: 2rem;
+  }
 }
 
 .hero {
@@ -82,6 +89,10 @@
   transform: rotateX(125deg);
   /*es para que el reflejo se rote un 180 grados. deg es grados*/
   filter: blur(0.125rem);
+}
+
+.acrostic {
+  padding-top: var(--primary-main-spacing);
 }
 
 /*# sourceMappingURL=fe.css.map */
