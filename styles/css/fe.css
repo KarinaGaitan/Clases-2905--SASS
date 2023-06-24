@@ -99,7 +99,15 @@
 .acrostic__stanza {
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--primary-main-color) / 2);
   list-style: none;
+}
+.container {
+  padding-top: calc(var(--primary-main-spacing) / 2);
+  padding-bottom: calc(var(--primary-main-spacing) / 2);
+  margin: auto;
 }
 
 /*# sourceMappingURL=fe.css.map */
