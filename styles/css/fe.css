@@ -1,6 +1,10 @@
 @charset "UTF-8";
+@keyframes beat {
+  to {
+    transform: scale(1.125);
+  }
+}
 :root {
-  scroll-behavior: smooth;
   --primary-main-color: deeppink;
   --primary-background-color: #16181d;
   --primary-text-color: white;
@@ -18,38 +22,51 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: radial-gradient(transparent, var(--primary-main-color));
 }
 .hero__name {
+  display: flex;
+  gap: 0.5rem;
   font-size: 2.5rem;
   font-weight: 700;
   text-decoration: none;
   color: inherit;
+  /*animation: name duration timing-function delay literation-count direction fill-mode*/
+  animation: beat 2s ease-in-out 0s infinite alternate;
+  /*suave al salir y suave al entrar, no te demores nada. que se repita infinito*/
 }
 .hero__letter {
+  position: relative;
+  transition: filter 0.25s;
   /*Para darle color a cada letra del acróstico diferente*/
 }
-.hero__letter__letter:nth-child(1) {
+.hero__letter:hover {
+  filter: brightness(2.5);
+}
+.hero__letter:nth-child(1) {
   color: var(--letter-color-1);
 }
-.hero__letter__letter:nth-child(2) {
+.hero__letter:nth-child(2) {
   color: var(--letter-color-2);
 }
-.hero__letter__letter:nth-child(3) {
+.hero__letter:nth-child(3) {
   color: var(--letter-color-3);
 }
-.hero__letter__letter:nth-child(4) {
+.hero__letter:nth-child(4) {
   color: var(--letter-color-4);
 }
-.hero__letter__letter:nth-child(5) {
+.hero__letter:nth-child(5) {
   color: var(--letter-color-5);
 }
-.hero__letter__letter:nth-child(6) {
+.hero__letter:nth-child(6) {
   color: var(--letter-color-6);
 }
-.hero__letter__letter::before {
+.hero__letter::before {
   content: var(--letter);
+  position: absolute;
+  transform: scale(1.125);
+  filter: blur(0.125rem);
+  /*Para que se repita cada letra del acróstico como espejo*/
 }
 
-/*Para que se repita cada letra del acróstico como espejo*/
-
-/*# sourceMappingURL=fe.css.map */
+/*# sourceMappingURL=fe.css..map */
