@@ -97,28 +97,39 @@
   padding-top: var(--primary-main-spacing);
   padding-bottom: var(--primary-main-spacing);
   background-image: radial-gradient(transparent, var(--primary-main-color));
-}
-.acrostic__stanza {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: calc(var(--primary-main-color) / 2);
-  list-style: none;
-}
-.acrostic__verse {
-  font-size: 1rem;
-  font-weight: 700;
-  text-shadow: 0 0 0.125rem var(--primary-info-color), 0 0 0.25rem var --primary-info-color;
-}
-.acrostic__verse::first-letter {
-  font-size: 1.5rem;
-}
-@media (min-width: 768px) {
-  .acrostic__verse {
-    --font-size: 1.75rem;
+
+  &__stanza {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--primary-main-color) / 2);
+    list-style: none;
+    /*como es una estrofa se quita los estilos por defecto con padding y margin*/
+    /*display flex y flex direction para darle espaciado*/
+  }
+
+  &__verse {
+    font-size: 1rem;
+    font-weight: 700;
+    text-shadow: 
+    0 0 0.125rem var(--primary-info-color),
+    0 0 0.25rem var (--primary-info-color);
+
+    &__::first-letter {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+
+      &::first-letter {
+        font-size: 1.75rem;
+      }
+    }
   }
 }
+
 
 .container {
   max-width: var(--primary-max-witdh);
