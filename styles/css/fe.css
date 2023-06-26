@@ -6,6 +6,7 @@
 }
 :root {
   scroll-behavior: smooth;
+  --primary-max-width: 512px;
   --primary-main-spacing: 1.5rem;
   --primary-main-color: deeppink;
   --primary-background-color: #16181d;
@@ -105,9 +106,10 @@
   list-style: none;
 }
 .container {
+  max-width: var(--primary-max-witdh);
   padding-top: calc(var(--primary-main-spacing) / 2);
   padding-bottom: calc(var(--primary-main-spacing) / 2);
-  margin: auto;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=fe.css.map */
