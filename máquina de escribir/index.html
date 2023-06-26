@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Máquina de Escribir</title>
+    <style>
+        @keyframes typing {
+            to {
+                width: 7ch;
+            }
+        }
+
+        @keyframes blinking {
+            to {
+                border-color: transparent;
+            }
+        }
+
+            body {
+            margin: 0;
+            background-color: #16181d;
+            color: #f6f7f9;
+            font-family: monospace;
+            }
+
+            span {
+            font-size: 5rem;
+            display: block;
+            /*cuando quisiera trabajar texto, largo y ancho sin primar espacios*/
+            /*white-space: nowrap;
+            Es cuando no quiero que exista salto de línea*/
+            border-right: 0.5rem solid #f6f7f9;
+            width: 0;
+            /*la unidad de medida es el ancho de un caracter*/
+            overflow: hidden;
+            animation:
+                typing 2s steps(6) 0s infinite alternate,
+                blinking 1s infinite;
+            }
+        </style>
+</head>
+
+<body>
+    <span>Karina</span>
+</body>
+
+</html>
