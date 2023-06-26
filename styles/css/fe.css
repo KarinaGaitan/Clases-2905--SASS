@@ -22,6 +22,7 @@
 @media (min-width: 768px) {
   :root {
     --primary-main-spacing: 2rem;
+    --primary-main-width: 1024px;
   }
 }
 
@@ -105,6 +106,20 @@
   gap: calc(var(--primary-main-color) / 2);
   list-style: none;
 }
+.acrostic__verse {
+  font-size: 1rem;
+  font-weight: 700;
+  text-shadow: 0 0 0.125rem var(--primary-info-color), 0 0 0.25rem var --primary-info-color;
+}
+.acrostic__verse::first-letter {
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  .acrostic__verse {
+    --font-size: 1.75rem;
+  }
+}
+
 .container {
   max-width: var(--primary-max-witdh);
   padding-top: calc(var(--primary-main-spacing) / 2);
